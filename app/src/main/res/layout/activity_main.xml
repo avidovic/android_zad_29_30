@@ -2,7 +2,6 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -34,6 +33,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickRetrieveTitles"  />
+
+    <Button
+        android:text="@string/BL"
+        android:id="@+id/btnRetrieveBL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBL"/>
+
+    <Button
+        android:text="@string/delete"
+        android:id="@+id/btnDeleteIsbn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickDelete"/>
 
 
 

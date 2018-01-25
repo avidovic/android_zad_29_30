@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">zad29_30</string>
+    <string name="BL">Fetch titles that start on B or L</string>
+    <string name="delete">Delete ISBN</string>
 </resources>

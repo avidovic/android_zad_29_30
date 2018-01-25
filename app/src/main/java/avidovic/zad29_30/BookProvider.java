@@ -19,7 +19,7 @@ import android.util.Log;
 public class BookProvider extends ContentProvider {
 
     static final String PROVIDER_NAME =
-            "hr.math.provider.contprov";
+            "avidovic.provider.zad29_30";
 
     static final Uri CONTENT_URI =
             Uri.parse("content://"+ PROVIDER_NAME + "/books");
@@ -42,7 +42,7 @@ public class BookProvider extends ContentProvider {
     SQLiteDatabase booksDB;
     static final String DATABASE_NAME = "Books";
     static final String DATABASE_TABLE = "titles";
-    static final int DATABASE_VERSION = 1;
+    static final int DATABASE_VERSION = 2;
     static final String DATABASE_CREATE =
             "create table " + DATABASE_TABLE +
                     " (_id integer primary key autoincrement, "
@@ -57,6 +57,7 @@ public class BookProvider extends ContentProvider {
         @Override
         public void onCreate(SQLiteDatabase db)
         {
+
             db.execSQL(DATABASE_CREATE);
         }
 
@@ -105,11 +106,11 @@ public class BookProvider extends ContentProvider {
         switch (uriMatcher.match(uri)){
             //---get all books---
             case BOOKS:
-                return "vnd.android.cursor.dir/vnd.math.books ";
+                return "vnd.android.cursor.dir/vnd.avidovic.books ";
 
             //---get a particular book---
             case BOOK_ID:
-                return "vnd.android.cursor.item/vnd.math.books ";
+                return "vnd.android.cursor.item/vnd.avidovic.books ";
 
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
